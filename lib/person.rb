@@ -28,6 +28,7 @@ attr_accessor :bank_account
     elsif @hygiene < 0
       @hygiene = 0
     end
+  end
 
     def happy?
       self.happiness > 7
@@ -76,7 +77,5 @@ attr_accessor :bank_account
 
 
 
-
-  end
 
 end
