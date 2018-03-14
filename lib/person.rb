@@ -1,4 +1,5 @@
 require 'pry'
+
 class Person
   attr_accessor :bank_account
   attr_reader :name, :happiness, :hygiene
@@ -12,7 +13,7 @@ class Person
 
   def happiness=(num)
     if num > 10
-      @happiness =10
+      @happiness = 10
     elsif num < 0
       @happiness = 0
     else
@@ -22,7 +23,7 @@ class Person
 
   def hygiene=(num)
     if num > 10
-      @hygiene =10
+      @hygiene = 10
     elsif num < 0
       @hygiene = 0
     else
@@ -55,44 +56,23 @@ class Person
     "♪ another one bites the dust ♫"
   end
 
-  # def happiness=(num)
-
   def call_friend(friend)
     self.happiness += 3
-    # binding.pry
     friend.happiness += 3
     "Hi #{friend.name}! It's #{self.name}. How are you?"
-
   end
 
   def start_conversation(friend, topic)
-
     if topic == "politics"
       self.happiness -= 2
       friend.happiness -= 2
       "blah blah partisan blah lobbyist"
-
     elsif topic == "weather"
       self.happiness += 1
       friend.happiness += 1
       "blah blah sun blah rain"
-
     else
       "blah blah blah blah blah"
-
     end
-
-
   end
-
-
-
-
-
 end
-
-# vicky = Person.new("Vicky")
-#
-# binding.pry
-#
-# puts "a"
